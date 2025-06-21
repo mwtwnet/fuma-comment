@@ -1,7 +1,7 @@
 import * as react from 'react';
-import { HTMLAttributes, ReactNode } from 'react';
-import { C as CommentsProviderProps } from './atom-CkT1hPsy.js';
-export { M as MentionContextType } from './atom-CkT1hPsy.js';
+import { HTMLAttributes, ReactNode, ComponentProps } from 'react';
+import { C as CommentsProviderProps, a as CommentsPost } from './atom-BkQeB1jQ.js';
+export { M as MentionContextType } from './atom-BkQeB1jQ.js';
 export { S as StorageContext } from './storage-CRqS87xe.js';
 import '@fuma-comment/server';
 import '@tiptap/react';
@@ -13,8 +13,10 @@ interface InnerProps {
      * title to show when the user has not logged in.
      *
      * Fallbacks to default `title` when not specified.
+     * @deprecated No longer used.
      */
     titleUnauthorized?: ReactNode;
+    editor?: ComponentProps<typeof CommentsPost>;
 }
 declare const Comments: react.ForwardRefExoticComponent<Omit<HTMLAttributes<HTMLDivElement>, keyof CommentsProviderProps | keyof InnerProps> & CommentsProviderProps & InnerProps & react.RefAttributes<HTMLDivElement>>;
 

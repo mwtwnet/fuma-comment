@@ -3,14 +3,14 @@ import {
   CommentsList,
   CommentsPost,
   CommentsProvider
-} from "./chunk-A6BDUCWQ.js";
-import "./chunk-P3GC32AD.js";
+} from "./chunk-ROJ24SN7.js";
+import "./chunk-PRHA7YAK.js";
 import "./chunk-B5523HTG.js";
-import "./chunk-SIPNGVYW.js";
-import "./chunk-WUBP3NTF.js";
+import "./chunk-G7JSBTAE.js";
+import "./chunk-G4UICHH5.js";
 import {
   twMerge
-} from "./chunk-5NN7OVAV.js";
+} from "./chunk-Y7FON2FE.js";
 import {
   __objRest,
   __spreadProps,
@@ -22,7 +22,25 @@ import { forwardRef } from "react";
 import { jsx, jsxs } from "react/jsx-runtime";
 var Comments = forwardRef(
   (_a, ref) => {
-    var _b = _a, { page, className, title, storage, mention, auth, apiUrl } = _b, props = __objRest(_b, ["page", "className", "title", "storage", "mention", "auth", "apiUrl"]);
+    var _b = _a, {
+      page,
+      className,
+      title,
+      storage,
+      editor,
+      mention,
+      auth,
+      apiUrl
+    } = _b, props = __objRest(_b, [
+      "page",
+      "className",
+      "title",
+      "storage",
+      "editor",
+      "mention",
+      "auth",
+      "apiUrl"
+    ]);
     return /* @__PURE__ */ jsx(
       CommentsProvider,
       {
@@ -41,7 +59,10 @@ var Comments = forwardRef(
             ref
           }, props), {
             children: [
-              /* @__PURE__ */ jsx(Inner, { title }),
+              /* @__PURE__ */ jsxs("div", { className: "relative flex flex-col gap-2", children: [
+                title,
+                /* @__PURE__ */ jsx(CommentsPost, __spreadValues({}, editor))
+              ] }),
               /* @__PURE__ */ jsx(CommentsList, {})
             ]
           })
@@ -50,12 +71,6 @@ var Comments = forwardRef(
     );
   }
 );
-function Inner(props) {
-  return /* @__PURE__ */ jsxs("div", { className: "relative flex flex-col gap-2", children: [
-    props.title,
-    /* @__PURE__ */ jsx(CommentsPost, {})
-  ] });
-}
 Comments.displayName = "Comments";
 export {
   Comments
